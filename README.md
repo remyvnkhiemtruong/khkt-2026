@@ -1,5 +1,4 @@
-// FILE: README.md
-# Cảnh báo sớm ngập úng – Case A (H–Q)
+# HỆ THỐNG CẢNH BÁO SỚM KHẢ NĂNG NGẬP ÚNG CỤC BỘ
 
 Hệ thống gồm ứng dụng desktop Windows (PyQt6) và firmware ESP8266/ESP32 đo mực nước (JSN‑SR04T) + mưa nhị phân (YL‑83), gửi telemetry JSON qua MQTT/HTTP. Ứng dụng tính H, H_eff, Q theo đường đặc tính H–Q, QC, dự báo 3–72h, cảnh báo theo rules.yaml, lưu SQLite, UI 5 tab, dialog hiệu chuẩn H–Q, và export CSV/PDF. Toàn bộ chạy offline trong LAN.
 
@@ -16,7 +15,7 @@ pip install -r app\requirements.txt
 
 ## Chạy ứng dụng
 ```powershell
-python -m app.main
+python -m flood_alert_ml
 ```
 - Mặc định HTTP ingest bật trên 0.0.0.0:8088 (POST /ingest).
 - MQTT subscribe topic: `cmau/flood/nodes/+/telemetry`.
@@ -86,8 +85,6 @@ pytest -q
 - Fit thất bại: CSV thiếu cột H/Q hoặc dữ liệu không dương; thử bỏ giá trị bất thường.
 - PDF lỗi font: đảm bảo reportlab cài đặt đúng; dùng ASCII/UTF-8 đơn giản.
 
-## Giấy phép
-MIT — xem file LICENSE.
 # Flood Alert ML System
 
 This repository contains the Flood Alert ML System Python project under `flood_alert_ml/`.
