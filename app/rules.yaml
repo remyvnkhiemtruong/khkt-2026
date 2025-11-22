@@ -1,0 +1,11 @@
+# Alert rules (Case A)
+early:
+  horizon_h: 6
+  prob_min: 0.60
+  dh10_min: 0.08  # m in 10 minutes
+  rain_next_hour_mmph_min: 10
+high:
+  horizon_h: 12
+  prob_min: 0.70
+hysteresis_pct: 8
+debounce_min: 30

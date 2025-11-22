@@ -1,0 +1,6 @@
+QWidget {
+  font-family: Segoe UI, Arial;
+  font-size: 10pt;
+}
+QTabWidget::pane { border: 1px solid #aaa; }
+QTabBar::tab { padding: 6px 12px; }
